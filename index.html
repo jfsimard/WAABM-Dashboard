@@ -18,17 +18,17 @@
             </div>
             <div class="user-profile">
                 <span><img src="images/bell-ring-outline.svg" width="20" class="icon-bell"></span>
-                <span><img src="images/account-circle.svg" width="40" class="icon-morgan-small"></span>
-                <div class="user-name">Morgan Oakley</div>
+                <span><img src="images/profile-pic.png" width="40" class="icon-profile-small"></span>
+                <div class="user-name">JF Simard</div>
             </div>
         </div>
         <div class="row-two">
             <div class="user-greetings">
-                <img class="picture" src="images/account-circle.svg" width="60" class="icon-morgan">
+                <img class="icon-profile-large" src="images/profile-pic.png" width="60" class="icon-morgan">
                 <div>
                     <div class="hi">Hi there,</div>
                     <div class="user-name-full">
-                        <span>Morgan Oakley (@morgan)</span>
+                        <span>JF Simard (@jfsimard)</span>
                     </div>
                 </div>
             </div>
@@ -45,20 +45,27 @@
             <h1>
                 Dashboard
             </h1>
-        </div>    
-        <ul class="menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Messages</a></li>
-            <li><a href="#">History</a></li>
-            <li><a href="#">Tasks</a></li>
-            <li><a href="#">Communities</a></li>
-        </ul>
-        <ul class="secondary-links">
-            <li><a href="#">Settings</a></li>
-            <li><a href="#">Support</a></li>
-            <li><a href="#">Privacy</a></li>
-        </ul>
+        </div>
+        <a href="#" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a> 
+        <nav class="nav">   
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Messages</a></li>
+                <li><a href="#">History</a></li>
+                <li><a href="#">Tasks</a></li>
+                <li><a href="#">Communities</a></li>
+            </ul>
+            <ul class="secondary-links">
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Privacy</a></li>
+            </ul>
+        </nav>
     </aside>
     <main id="main-content" class="main-content">
         <div class="projects">
@@ -141,5 +148,20 @@
             </div>
         </div>
     </main>
+    <script >
+        const hamburger = document.getElementById('hamburger');
+        const nav = document.querySelector('nav');
+
+        function handleClick(e) {
+            nav.classList.toggle("open");
+        }
+        
+        function toggleNav() {
+            console.log(nav);
+            hamburger.addEventListener('click', handleClick);
+        }
+        toggleNav();
+        
+    </script>
 </body>
 </html>
