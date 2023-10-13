@@ -65,6 +65,8 @@ Header
 #header .user-profile .icon-profile-small,
 #header .user-greetings .icon-profile-large {
     border-radius: 50%;
+    -webkit-filter: grayscale(85%);
+    filter: grayscale(85%);
 }
 #header .search {
     display: flex;
