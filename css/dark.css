@@ -1,0 +1,21 @@
+:root .dark-theme {
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    --inv-text-color: #EEEEEE;
+    --text-color: #EEEEEE;
+    --bg-color: #121212;
+    --main-bg-color: #232121;
+    --cards-bg-color: #121212;
+    --btn-color: #121212;
+    --btn-border-color: #EEEEEE;
+    --btn-bg-color: #EEEEEE;
+    --sidebar-bg-color: #121212;
+    --card-left-border: #EEEEEE;
+    --box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}
+
+.dark-theme #header .search .magnifyer svg,
+.dark-theme #header .user-profile svg,
+.dark-theme #header .user-greetings svg {
+    fill: white;
+}

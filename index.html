@@ -4,31 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WAABM Dashboard</title>
-    <link
-    href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined"
-    rel="stylesheet" />
-    <link rel="stylesheet" href="style.css">
+    <script src="js/script.js" defer></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body id="dashboard">
     <header id="header" class="header">
         <div class="row-one">
             <div class="search">
-                <img src="images/magnify.svg" width="22" class="icon-search" alt="maginifying glass icon">
+                <!-- <img src="images/magnify.svg" width="22" class="icon-search" alt="Search Icon"> -->
+                <span class="magnifyer">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+                </span>
+
                 <input type="search" placeholder="Search">
             </div>
             <div class="user-profile">
-                <span><img src="images/bell-ring-outline.svg" width="20" class="icon-bell" alt="Notification bell"></span>
-                <span><img src="images/WAABM-avatar-500x500.jpg" width="40" class="icon-profile-small" alt="WAABM Profile icon"></span>
-                <div class="user-name">JF Simard</div>
+                <span class="bell">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10,21H14A2,2 0 0,1 12,23A2,2 0 0,1 10,21M21,19V20H3V19L5,17V11C5,7.9 7.03,5.17 10,4.29C10,4.19 10,4.1 10,4A2,2 0 0,1 12,2A2,2 0 0,1 14,4C14,4.1 14,4.19 14,4.29C16.97,5.17 19,7.9 19,11V17L21,19M17,11A5,5 0 0,0 12,6A5,5 0 0,0 7,11V18H17V11M19.75,3.19L18.33,4.61C20.04,6.3 21,8.6 21,11H23C23,8.07 21.84,5.25 19.75,3.19M1,11H3C3,8.6 3.96,6.3 5.67,4.61L4.25,3.19C2.16,5.25 1,8.07 1,11Z" /></svg>                </span>
+                <span>
+                    <button id="switch" class="icon-switch">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 6V18H16V6H8M14 10H10V8H14V10M19.4 1.6C19 1.2 18.5 1 18 1H6C5.5 1 5 1.2 4.6 1.6C4.2 2 4 2.5 4 3V21C4 21.5 4.2 22 4.6 22.4C5 22.8 5.5 23 6 23H18C18.5 23 19 22.8 19.4 22.4C19.8 22 20 21.5 20 21V3C20 2.5 19.8 2 19.4 1.6M18 21H6V3H18V21Z" /></svg>
+                    </button>
+                </span>
+                <span class="small-circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z" /></svg>
+                </span>
+                <div class="user-name">Morgan Oakley</div>
             </div>
         </div>
         <div class="row-two">
             <div class="user-greetings">
-                <img class="icon-profile-large" src="images/WAABM-avatar-500x500.jpg" width="60" alt="WAABM smaller profile icon">
+                <span class="picture">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z" /></svg>
+                </span>
                 <div>
                     <div class="hi">Hi there,</div>
                     <div class="user-name-full">
-                        <span>JF Simard (@jfsimard)</span>
+                        <span>Morgan Oakley (@morgan)</span>
                     </div>
                 </div>
             </div>
@@ -45,35 +58,28 @@
             <h1>
                 Dashboard
             </h1>
-        </div>
-        <a href="#" id="hamburger" role="button" aria-label="toggle menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </a> 
-        <nav class="nav">   
-            <ul class="menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Messages</a></li>
-                <li><a href="#">History</a></li>
-                <li><a href="#">Tasks</a></li>
-                <li><a href="#">Communities</a></li>
-            </ul>
-            <ul class="secondary-links">
-                <li><a href="#">Settings</a></li>
-                <li><a href="#">Support</a></li>
-                <li><a href="#">Privacy</a></li>
-            </ul>
-        </nav>
+        </div>    
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Messages</a></li>
+            <li><a href="#">History</a></li>
+            <li><a href="#">Tasks</a></li>
+            <li><a href="#">Communities</a></li>
+        </ul>
+        <ul class="secondary-links">
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Privacy</a></li>
+        </ul>
     </aside>
     <main id="main-content" class="main-content">
         <div class="projects">
             <h2>Our Songs</h2>
             <div class="cards">
                 <div class="card">
-                    <h3> <a href="https://soundcloud.com/waabm/falling-for-you" title="Fallin&#x27; For You - Remix 2018" target="_blank" rel="noopener">Fallin&#x27; For You - Remix 2018</a></h3>
-                    <iframe width="100%" height="150" scrolling="no" frameborder="no" title="Soundcloud Embedded Player" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/222246353&color=%231a2529&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                    <h3> <a href="https://soundcloud.com/waabm/falling-for-you" title="Fallin&#x27; For You - Remix 2018" target="_blank">Fallin&#x27; For You - Remix 2018</a></h3>
+                    <iframe width="100%" height="150" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/222246353&color=%231a2529&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
                     <div class="utils">
                         <img src="images/star-plus-outline.svg" width="24" alt="">
                         <img src="images/eye-plus-outline.svg" width="24" alt="">
@@ -82,8 +88,8 @@
                 </div>
                 
                 <div class="card">
-                    <h3><a href="https://soundcloud.com/waabm/thundering-waters" title="Thundering Waters - Mxdn - 02" target="_blank" rel="noopener">Thundering Waters - Mxdn - 02</a></h3>
-                    <iframe width="100%" height="150" scrolling="no" frameborder="no" title="Soundcloud Embedded Player" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/198307393&color=%231a2529&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                    <h3><a href="https://soundcloud.com/waabm/thundering-waters" title="Thundering Waters - Mxdn - 02" target="_blank">Thundering Waters - Mxdn - 02</a></h3>
+                    <iframe width="100%" height="150" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/198307393&color=%231a2529&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
                     <div class="utils">
                         <img src="images/star-plus-outline.svg" width="24" alt="">
                         <img src="images/eye-plus-outline.svg" width="24" alt="">
@@ -91,8 +97,8 @@
                     </div>
                 </div>
                 <div class="card">
-                    <h3><a href="https://soundcloud.com/waabm/dream-mx-2" title="Dream - Mxdn - 02" target="_blank" rel="noopener">Dream - Mxdn - 02</a></h3>
-                    <iframe width="100%" height="150" scrolling="no" frameborder="no" title="Soundcloud Embedded Player" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/142281966&color=%231a2529&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>                  
+                    <h3><a href="https://soundcloud.com/waabm/dream-mx-2" title="Dream - Mxdn - 02" target="_blank">Dream - Mxdn - 02</a></h3>
+                    <iframe width="100%" height="150" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/142281966&color=%231a2529&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>                  
                     <div class="utils">
                         <img src="images/star-plus-outline.svg" width="24" alt="">
                         <img src="images/eye-plus-outline.svg" width="24" alt="">
@@ -100,8 +106,8 @@
                     </div>
                 </div>
                 <div class="card">
-                    <h3><a href="https://soundcloud.com/waabm/always" title="Always - Mxdn - 04" target="_blank" rel="noopener">Always - Mxdn - 04</a></h3>
-                    <iframe width="100%" height="150" scrolling="no" frameborder="no" title="Soundcloud Embedded Player" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/183276418&color=%23413a3e&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                    <h3><a href="https://soundcloud.com/waabm/always" title="Always - Mxdn - 04" target="_blank">Always - Mxdn - 04</a></h3>
+                    <iframe width="100%" height="150" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/183276418&color=%23413a3e&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
                     <div class="utils">
                         <img src="images/star-plus-outline.svg" width="24" alt="">
                         <img src="images/eye-plus-outline.svg" width="24" alt="">
@@ -109,8 +115,8 @@
                     </div>
                 </div>
                 <div class="card">
-                    <h3><a href="https://soundcloud.com/waabm/passage" title="Passage" target="_blank" rel="noopener">Passage</a></h3>
-                    <iframe width="100%" height="150" scrolling="no" frameborder="no" title="Soundcloud Embedded Player" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/174008963&color=%231a2529&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                    <h3><a href="https://soundcloud.com/waabm/passage" title="Passage" target="_blank">Passage</a></h3>
+                    <iframe width="100%" height="150" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/174008963&color=%231a2529&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
                     <div class="utils">
                         <img src="images/star-plus-outline.svg" width="24" alt="">
                         <img src="images/eye-plus-outline.svg" width="24" alt="">
@@ -118,8 +124,8 @@
                     </div>
                 </div>
                 <div class="card">
-                    <h3><a href="https://soundcloud.com/waabm/merry-christmas-to-the-world" title="Merry Christmas" target="_blank" rel="noopener">Merry Christmas</a></h3>
-                    <iframe width="100%" height="150" scrolling="no" frameborder="no" title="Soundcloud Embedded Player" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1184994646&color=%2329245c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                    <h3><a href="https://soundcloud.com/waabm/merry-christmas-to-the-world" title="Merry Christmas" target="_blank">Merry Christmas</a></h3>
+                    <iframe width="100%" height="150" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1184994646&color=%2329245c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
                     <div class="utils">
                         <img src="images/star-plus-outline.svg" width="24" alt="">
                         <img src="images/eye-plus-outline.svg" width="24" alt="">
@@ -139,28 +145,14 @@
         <div class="announcements">
             <h2>Announcements</h2>
             <div class="box trend">
-                <h3><a href="https://soundcloud.com/waabm/sets/kitchen-sessions-vol-1/s-vtY6CuOHz1U" title="Kitchen Sessions Pre-release - Vol. 1" target="_blank" rel="noopener">Kitchen Sessions - Vol. 1 <br>(Pre-release) </a></h3>
+                <h3><a href="https://soundcloud.com/waabm/sets/kitchen-sessions-vol-1/s-vtY6CuOHz1U" title="Kitchen Sessions Pre-release - Vol. 1" target="_blank">Kitchen Sessions - Vol. 1 <br>(Pre-release) </a></h3>
                 <p>
                     <small>The Kitchen Sessions are a compendium of short songs and hymns that were composed, practiced, performed and recorded simply and are published almost as is with minimal clean up.</small> 
                 </p>
                 <br>
-                <iframe width="100%" height="300" scrolling="no" title="Embedded Soundcloud player for plalist" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1648801849%3Fsecret_token%3Ds-vtY6CuOHz1U&color=%231a2529&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1648801849%3Fsecret_token%3Ds-vtY6CuOHz1U&color=%231a2529&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
             </div>
         </div>
     </main>
-    <script >
-        const hamburger = document.getElementById('hamburger');
-        const nav = document.querySelector('nav');
-
-        function handleClick(e) {
-            nav.classList.toggle("open");
-        }
-        
-        function toggleNav() {
-            hamburger.addEventListener('click', handleClick);
-        }
-        toggleNav();
-        
-    </script>
 </body>
 </html>
