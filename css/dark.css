@@ -19,7 +19,7 @@
 .dark-theme #header .user-greetings svg {
     fill: white;
 }
-.dark-theme .projects {
+.dark-theme .projects, .dark-theme .trending, .dark-theme .announcements {
     color: var(--text-color);
 }
 
