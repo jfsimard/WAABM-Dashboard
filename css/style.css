@@ -361,7 +361,8 @@ Main Content
     }
     #sidebar ul {
         display: flex;
-        justify-content: space-around;
+        justify-content: right;
+        gap: 30px;
         align-items: center;
     }
     #sidebar ul li {
