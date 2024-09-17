@@ -20,7 +20,8 @@
 .dark-theme .card .utils svg {
     fill: white;
 }
-.dark-theme .projects, .dark-theme .trending, .dark-theme .announcements {
+.dark-theme .projects, .dark-theme .trending, .dark-theme .announcements,
+.dark-theme ..announcements a {
     color: var(--bg-color);
 }
 .dark-theme .projects h2, .dark-theme .trending h2, .dark-theme .announcements h2 {
