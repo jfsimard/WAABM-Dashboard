@@ -1,7 +1,7 @@
 :root .dark-theme {
     font-family: 'Roboto', Helvetica, Arial, sans-serif;
     font-size: 16px;
-    --inv-text-color: #010101;
+    --inv-text-color: #EEEEEE;
     --text-color: #EEEEEE;
     --bg-color: #121212;
     --main-bg-color: #232121;
@@ -16,12 +16,17 @@
 
 .dark-theme #header .search .magnifyer svg,
 .dark-theme #header .user-profile svg,
-.dark-theme #header .user-greetings svg {
+.dark-theme #header .user-greetings svg,
+.dark-theme .card .utils svg {
     fill: white;
 }
 .dark-theme .projects, .dark-theme .trending, .dark-theme .announcements {
+    color: var(--bg-color);
+}
+.dark-theme .projects h2, .dark-theme .trending h2, .dark-theme .announcements h2 {
     color: var(--text-color);
 }
+
 
 @media only screen and (max-width: 1024px) {
     .dark-theme #header {

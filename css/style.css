@@ -278,6 +278,10 @@ Main Content
 .card .utils img {
     margin-left: 10px;
 }
+.card .utils svg {
+    margin-left: 10px;
+    width: 24px;
+}
 .announcements a {
     color: var(--text-color);
     text-decoration: none;
