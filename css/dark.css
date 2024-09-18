@@ -20,6 +20,12 @@
 .dark-theme .card .utils svg {
     fill: white;
 }
+.dark-theme #header .icon-switch ._off {
+    display: inline-block;
+}
+.dark-theme #header .icon-switch ._on {
+    display: none;
+}
 .dark-theme .projects, .dark-theme .trending, .dark-theme .announcements,
 .dark-theme .announcements a {
     color: var(--bg-color);

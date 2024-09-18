@@ -4,5 +4,4 @@ switchBtn.addEventListener('click', changeTheme)
 
 function changeTheme() {
     bdy.classList.toggle("dark-theme");
-    switchBtn.classList.toggle("dark");
 }

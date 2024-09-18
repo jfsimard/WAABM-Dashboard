@@ -75,6 +75,12 @@ Header
 .icon-switch span {
     text-indent: -10000px;
 }
+.icon-switch ._off {
+    display: none;
+}
+.icon-switch ._on {
+    display: inline-block;
+}
 
 #header .user-profile {
     display: flex;
